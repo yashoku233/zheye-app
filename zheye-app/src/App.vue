@@ -7,7 +7,6 @@
 <script lang="ts">
 /* eslint-disable */
 import 'bootstrap/dist/css/bootstrap.min.css'
-
 import { defineComponent } from 'vue';
 import ColumnList from './components/ColumnList.vue';
 import { ColumnProps } from './types/ColumnProps'
