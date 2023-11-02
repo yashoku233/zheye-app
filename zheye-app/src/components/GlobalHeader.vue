@@ -11,7 +11,11 @@
     </ul>
     <ul class="list-inline" v-else>
       <li class="list-inline-item">
-        <Dropdown :title="title" />
+        <Dropdown :title="`你好, ${user.name}`">
+          <dropdown-item> <a href="#" class="dropdown-item">新建文章</a></dropdown-item>
+          <dropdown-item disabled> <a href="#" class="dropdown-item">编辑资料</a></dropdown-item>
+          <dropdown-item> <a href="#" class="dropdown-item">退出登录</a></dropdown-item>
+        </Dropdown>
       </li>
     </ul>
   </nav>
@@ -21,8 +25,8 @@
 import { PropType } from 'vue';
 import { UserProps } from '../types/ColumnProps';
 import Dropdown from './Dropdown.vue';
+import DropdownItem from './DropdownItem.vue';
 
-const title = 'zjw'
 const props = defineProps({
   user: {
     type: Object as PropType<UserProps>,
